@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSockets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        html, body {
+            height: 100%;
+            font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;            
+        }
+
+        #box{
+            background-color: rgb(255, 246, 249);
+            padding: 30px 50px 50px 50px;
+            border:1px solid rgb(245, 217, 227);
+            border-radius: 25px;
+        }     
+        input{
+            font-size: 15px;
+            height: 28px;
+        }
+        button{
+            width: 100px;
+            height: 35px;
+            background-color: firebrick;
+            color: rgb(255, 246, 249); 
+            border: none;    
+            border-radius: 5px;
+        }
+        button:disabled, button[disabled]{
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <!-- Simple HTML page for sending messages with input box and send button-->
+        <h1 style="color: firebrick;font-weight: bolder;">Message Broadcaster</h1>
+        <pre><i>      Send messages instantly to users online!</i></pre>
+        <hr style="height:0.5px; border-width:0; color:grey; background-color:grey">
+        <div id="loginPage">
+            <p>Enter some funky name to send messages! 😎 </p>        
+            <input type="text" id="username" alt="Enter your profile name">
+            <button id="login">LOGIN</button>                
+        </div>
+
+        <div id="chatApp" style="display: none;">
+            <div id="userprofile"></div>            
+            <input type="text" id="message">
+            <button id="send">Send!</button>
+            <div id="messages"></div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+    
+    
+</body>
+</html>
